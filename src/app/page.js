@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const { user, loading } = useAuthContext();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -11,7 +10,6 @@ export default function Home() {
   }, []);
 
   const handleSignOut = async () => {
-    const { error } = await signOutUser();
     if (error) {
       console.error("Error al cerrar sesión:", error);
     }
