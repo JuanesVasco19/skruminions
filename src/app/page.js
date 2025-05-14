@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useAuthContext } from "./context/AuthContext";
+import { useAuthContext } from "../app/context/AuthContext";
 import { useEffect, useState } from 'react';
-import signOutUser from "@/firebase/auth/signout";
+import signOutUser from "../../firebase/auth/signout";
 
 export default function Home() {
   const { user, loading } = useAuthContext();
