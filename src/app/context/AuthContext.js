@@ -7,6 +7,8 @@ const auth = getAuth(firebase_app);
 
 export const AuthContext = React.createContext({});
 
+export const useAuthContext = () => React.useContext(AuthContext); 
+
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = React.useState(null);
     const [loading, setLoading] = React.useState(true);
